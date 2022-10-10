@@ -1,4 +1,4 @@
-<p align="center"><img height="50" height="auto" src="https://findora.org/wp-content/uploads/2022/06/Logo_Purple-1.png"</p>
+<p align="center"><img height="120" height="auto" src="https://findora.org/wp-content/uploads/2022/06/Logo_Purple-1.png"</p>
   
 # Findora Validator Setup
 
@@ -52,5 +52,19 @@ Then save it `CTRL+X` `Y` `Enter`
 
 
 Your `mainnet_node.key` should be like this
-<p align="center"><img height="50" height="auto" src="https://user-images.githubusercontent.com/98658943/194928553-6d50f5d4-7eb2-43ef-a6c1-78e2b3478d2e.png"</p>
+<p align="left"><img height="100" height="auto" src="https://user-images.githubusercontent.com/98658943/194928553-6d50f5d4-7eb2-43ef-a6c1-78e2b3478d2e.png"</p>
 
+After it's all ready, we can continue to the next step.
+
+### Download & Run the scripts
+	
+Back to your $HOME if you still in `~/data/findora/mainnet/` then download
+
+To download:
+```
+wget https://wiki.findora.org/assets/files/node_init_mainnet-423a36f2adaaeab9de7ff63e61d3d4c1.sh
+```
+After finished downloading, run the script:
+```
+bash -x node_init_mainnet-423a36f2adaaeab9de7ff63e61d3d4c1.sh
+```

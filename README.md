@@ -106,11 +106,11 @@ This is the guide how to Migrate Servers by [@EasyNode](https://twitter.com/Easy
 
 <strong><p style="font-size=14px">Useful command</p></strong>
 
->- Check Logs:
+- Check Logs:
 ```
 docker logs -f findorad
 ```
->- Check Local Node Status:
+- Check Local Node Status:
 ```
 curl 'http://localhost:26657/status'
 curl 'http://localhost:8669/version'

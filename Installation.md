@@ -18,6 +18,11 @@ Explorer
 - Minimum: 8GB RAM, 2 Core CPU (2.90GHz per core), 100GB Hard Disk
 - Recommended: 16GB RAM, 4 Core CPU (2.90Ghz per core), 300GB Hard Disk
 
+### Install Docker
+If you don't have docker, install it first
+
+- [How to install docker](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-20-04)
+
 ### Firewall
 ```
 sudo ufw allow 22 && sudo ufw allow 26657/tcp && sudo ufw allow 8545/tcp && sudo ufw allow 8667/tcp && sudo ufw allow 8668/tcp && sudo ufw allow 8669/tcp && sudo ufw enable

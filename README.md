@@ -17,10 +17,11 @@ Explorer
 ### System Requirements
 - Minimum: 8GB RAM, 2 Core CPU (2.90GHz per core), 100GB Hard Disk
 - Recommended: 16GB RAM, 4 Core CPU (2.90Ghz per core), 300GB Hard Disk
-        > AWS T3 t3.2xlarge
-        > AliCloud g6 g6.2xlarge
-        > GCP n2 n2-standard-8
-        > Contabo Cloud VPS M
+    - example
+      - AWS T3 t3.2xlarge
+      - AliCloud g6 g6.2xlarge
+      - GCP n2 n2-standard-8
+      - Contabo Cloud VPS M
 
 ### Install Docker
 If you don't have docker in your system, install it first
@@ -32,6 +33,7 @@ This is the commands to configure the needed ports on Ubuntu 20.04LTS using `ufw
 ```
 sudo ufw allow 22 && sudo ufw allow 26657/tcp && sudo ufw allow 8545/tcp && sudo ufw allow 8667/tcp && sudo ufw allow 8668/tcp && sudo ufw allow 8669/tcp && sudo ufw enable
 ```
+[Tutorial about ufw](https://www.digitalocean.com/community/tutorials/how-to-set-up-a-firewall-with-ufw-on-ubuntu-20-04)
 
 ### Setup the fn CLI Tool
 `fn`: Findora Node Setup (fn) is a command-line (CLI) utility that allows you to set up a validator node and stake/unstake FRA.
@@ -54,9 +56,7 @@ Generate a new random pair of public and private keys that will be used for FRA 
 fn genkey > tmp.gen.keypair
 ```
 Before continue to the installation steps.
-
 You will need to create a directory to save your keys. 
-
 To do it, open new window then run these command
 ```
 sudo mkdir -p /data/findora/mainnet

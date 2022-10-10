@@ -49,3 +49,8 @@ nano mainnet_node.key
 ```
 Fill with `temp.gen.keypair` 's content.
 Then save it `CTRL+X` `Y` `Enter`
+
+
+Your `mainnet_node.key` should be like this
+<p align="center"><img height="50" height="auto" src="https://user-images.githubusercontent.com/98658943/194928553-6d50f5d4-7eb2-43ef-a6c1-78e2b3478d2e.png"</p>
+

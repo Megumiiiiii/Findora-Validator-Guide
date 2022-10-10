@@ -95,4 +95,5 @@ fn setup -K /data/findora/mainnet/tendermint/config/priv_validator_key.json
 ### Backup
 Backup the following files
 `/data/findora/mainnet/mainnet_node.key` & `/data/findora/mainnet/node.mnemonic`
-And `config` folder from `/data/findora/mainnet/tendermint`
+
+And backup `config` folder from `/data/findora/mainnet/tendermint`

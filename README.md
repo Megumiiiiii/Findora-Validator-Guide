@@ -1,3 +1,5 @@
+<p align="center"><img height="50" height="auto" src="https://findora.org/wp-content/uploads/2022/06/Logo_Purple-1.png"</p>
+  
 # Findora Validator Setup
 
 Official Documentation:
@@ -17,7 +19,7 @@ Explorer
 - Recommended: 16GB RAM, 4 Core CPU (2.90Ghz per core), 300GB Hard Disk
 
 
-# Setup the fn CLI Tool
+### Setup the fn CLI Tool
 `fn`: Findora Node Setup (fn) is a command-line (CLI) utility that allows you to set up a validator node and stake/unstake FRA.
 
 - [Linux](https://wiki.findora.org/bin/linux/fn)
@@ -32,7 +34,7 @@ chmod +x fn
 mv fn /usr/local/bin/
 ```
 
-# Generate new Key
+### Generate new Key
 Generate a new random pair of public and private keys that will be used for FRA staking:
 ```
 fn genkey > tmp.gen.keypair

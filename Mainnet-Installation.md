@@ -1,6 +1,6 @@
 <p align="center"><img height="120" height="auto" src="https://findora.org/wp-content/uploads/2022/06/Logo_Purple-1.png"</p>
   
-# Findora Validator Setup
+# Mainnet Node Installation Guide
 
 Official Documentation:
 
@@ -93,14 +93,36 @@ fn setup -K /data/findora/mainnet/tendermint/config/priv_validator_key.json
 ```
 
 ### Backup
-Backup the following files
+Backup the following files for later if you want to migrate servers
+ 
 `/data/findora/mainnet/mainnet_node.key` & `/data/findora/mainnet/node.mnemonic`
 
 And backup `config` folder from `/data/findora/mainnet/tendermint`
 
-<strong><p style="font-size=14px" align="left"> You have successfully installed node</p></strong>
+This is the guide how to Migrate Servers by [@EasyNode](https://twitter.com/EasyNode)
 
-# Staking
+[How to Migrate](https://guides.easynode.one/findora/moving)
+
+
+<strong><p style="font-size=14px>Useful command</p></strong>
+
+>- Check Logs:
+```
+docker logs -f findorad
+```
+>- Check Local Node Status:
+```
+curl 'http://localhost:26657/status'
+curl 'http://localhost:8669/version'
+curl 'http://localhost:8668/version' # Only if you set the 'ENABLE_LEDGER_SERVICE'
+curl 'http://localhost:8667/version' # Only if you set the 'ENABLE_QUERY_SERVICE'
+```
+
+<strong><p style="font-size=16px"> You have successfully installed node</p></strong>
+
+Next steps is how to fund your validator and stake FRA
+
+# Staking Guide
 Validators must stake a minimum of 10,000 FRA to register as a validator. Before you can stake FRA to your validator, you must first transfer FRA to the Findora Address of your validator.
 
 If you don't have FRA,

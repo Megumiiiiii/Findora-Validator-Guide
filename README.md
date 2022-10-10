@@ -129,7 +129,7 @@ This is a magic script that can be used in case of errors after installation
 [Safety Clean](https://wiki.findora.org/docs/validators/update-version/#auto-safety-clean)
 
 
-<strong><p style="font-size=14px">Useful command</p></strong>
+#### Useful command
 
 - Check Logs:
 ```
@@ -236,3 +236,7 @@ node, a float number from 0.0 to 1.0, optional
         --validator-memo-name <Name>
         --validator-memo-website <Website>
 ```
+### Stake Initial FRA and Set Commission Rate
+After receiving FRA to your validator's Address, you must stake a minimum of 10,000 FRA to become a validator (make sure you have more than 10,000FRA in your Validator's wallet for fees). Only the top 100 validators (with the most FRA staked) will earn FRA rewards.
+
+>>> **Tip**: Before staking, wait for 100% data synchronization of your validator node, otherwise you may be charged a 'validator node offline' penatly fee.

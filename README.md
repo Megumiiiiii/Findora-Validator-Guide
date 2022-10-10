@@ -159,13 +159,80 @@ Next steps is how to fund your validator and stake FRA
 
 
 # Staking Guide
-Validators must stake a minimum of 10,000 FRA to register as a validator. Before you can stake FRA to your validator, you must first transfer FRA to the Findora Address of your validator.
+
+### Minimum self-stake and where you can buy FRA
+Validators must stake a minimum of 10,000 FRA to register as a validator. Before you can stake FRA to your validator, you must transfer FRA from existing wallet to the Findora Address of your validator.
 
 If you don't have FRA,
-You can buy from any exchange listed on [this page](https://coinmarketcap.com/currencies/findora/markets/)
+You can buy from any exchange listed on [CEX Lists](https://coinmarketcap.com/currencies/findora/markets/)
 
-**Note**: Kucoin only support Findora EVM(0x.....) to withdrawing ,you need to transfer from EVM to Findora Wallet(fra....) first before you can stake it.
+**Note**: Kucoin only support Findora EVM(0x.....) to withdrawing ,you need to transfer from EVM to Findora Wallet(fra....) before you can stake it.
 
-To transfer your FRA from EVM to Findora Wallet, use Prism Feature. See this [guide](https://wiki.findora.org/docs/dapp/wallet/)
+To transfer your FRA from EVM to Findora Wallet, use Prism Feature. See this [Guide](https://wiki.findora.org/docs/dapp/wallet/)
 
-# 
+## Node Operations
+### fn CLI tool
+Besides node setup, the fn tool is also used for general validator staking operations such as staking FRA into the validator, setting the commission rate the validator charges, transferring FRA balance on the validator to another wallet address and claiming FRA rewards.
+
+To see the list of all sub-commands under `fn` use the `--help` flag as shown below:
+```
+fn --help
+```
+Output:
+```
+FindoraNetwork
+A command line tool of the Findora Network
+USAGE:
+    fn [SUBCOMMAND]
+FLAGS:
+    -h, --help       Prints help information
+    -v, --version
+SUBCOMMANDS:
+    account              Return user contract account information
+    asset                manipulate custom asset
+    claim                Claim accumulated FRA rewards
+    contract-deposit     Transfer FRA from a Findora account to the specified Ethereum address
+    contract-withdraw    Transfer FRA from an Ethereum address to the specified Findora account
+    delegate             Delegating operations
+    dev                  Manage development clusters on your localhost
+    gen-eth-key          Generate an Ethereum address
+    genkey               Generate a random Findora public key/private key
+Pair
+    help                 Prints this message or the help of the given subcommand(s)
+    replace_staker       Replace the staker of the validator with target address
+    setup                Setup environment variables for staking transactions
+    show                 View Validator status and accumulated rewards
+    stake                Stake tokens (i.e. bond tokens) from a Findora account to a Validator
+    staker-update        Update information of a validator
+    transfer             Transfer tokens from one address to another
+    transfer-batch       Transfer tokens from one address to many others
+    undelegate           Undelegating operations
+    unstake              Unstake tokens (i.e. unbond tokens) from a Validator
+    wallet               manipulates a findora wallet   stake FRAs to a custom validator
+```
+It's all of lists sub-command that can you use
+
+And to get detailed info about a specific sub-command, use the `--help` flag along with the command.
+
+Example:
+```
+fn staker-update --help
+```
+Output:
+```
+fn-staker-update
+Update information of a validator
+USAGE:
+    fn staker-update [OPTIONS]
+FLAGS:
+    -h, --help       Prints help information
+    -V, --version    Prints version information
+OPTIONS:
+    -R, --commission-rate <Rate>              the commission rate of your
+node, a float number from 0.0 to 1.0, optional
+    -M, --validator-memo <Memo>               the description of your node, optional
+        --validator-memo-desc <Desc>
+        --validator-memo-logo <Logo>
+        --validator-memo-name <Name>
+        --validator-memo-website <Website>
+```

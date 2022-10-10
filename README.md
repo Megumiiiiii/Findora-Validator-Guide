@@ -115,6 +115,16 @@ This is the guide how to Migrate Servers by [@EasyNode](https://twitter.com/Easy
 
 [How to Migrate](https://guides.easynode.one/findora/moving)
 
+### Update
+For the update scripts refer to this [link](https://wiki.findora.org/docs/validators/update-version#update-image-version)
+
+If there is an update, it will definitely be announced on discord so don't forget to join
+
+### Safety Clean
+This is a magic script that can be used in case of errors after installation
+
+[Safety Clean](https://wiki.findora.org/docs/validators/update-version/#auto-safety-clean)
+
 
 <strong><p style="font-size=14px">Useful command</p></strong>
 
@@ -125,14 +135,25 @@ docker logs -f findorad
 - Check Local Node Status:
 ```
 curl 'http://localhost:26657/status'
-curl 'http://localhost:8669/version'
-curl 'http://localhost:8668/version' # Only if you set the 'ENABLE_LEDGER_SERVICE'
-curl 'http://localhost:8667/version' # Only if you set the 'ENABLE_QUERY_SERVICE'
 ```
+```
+curl 'http://localhost:8669/version'
+```
+```
+curl 'http://localhost:8668/version'
+```
+Only if you set the 'ENABLE_LEDGER_SERVICE'
+```
+curl 'http://localhost:8667/version'
+```
+Only if you set the 'ENABLE_QUERY_SERVICE'
+
+
 
 <strong><p style="font-size=16px"> You have successfully installed node</p></strong>
 
 Next steps is how to fund your validator and stake FRA
+
 
 # Staking Guide
 Validators must stake a minimum of 10,000 FRA to register as a validator. Before you can stake FRA to your validator, you must first transfer FRA to the Findora Address of your validator.
@@ -143,3 +164,5 @@ You can buy from any exchange listed on [this page](https://coinmarketcap.com/cu
 **Note**: Kucoin only support Findora EVM(0x.....) to withdrawing ,you need to transfer from EVM to Findora Wallet(fra....) first before you can stake it.
 
 To transfer your FRA from EVM to Findora Wallet, use Prism Feature. See this [guide](https://wiki.findora.org/docs/dapp/wallet/)
+
+# 

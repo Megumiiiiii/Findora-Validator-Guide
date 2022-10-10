@@ -12,7 +12,7 @@ Official Documentation:
 
 Explorer 
 
->- [Findora Explorer](https://findorascan.io/)
+[Findora Explorer](https://findorascan.io/)
 
 ### System Requirements
 - Minimum: 8GB RAM, 2 Core CPU (2.90GHz per core), 100GB Hard Disk
@@ -21,7 +21,7 @@ Explorer
 ### Install Docker
 If you don't have docker, install it first
 
-- [How to install docker](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-20-04)
+[How to install docker](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-20-04)
 
 ### Firewall
 ```

@@ -18,6 +18,10 @@ Explorer
 - Minimum: 8GB RAM, 2 Core CPU (2.90GHz per core), 100GB Hard Disk
 - Recommended: 16GB RAM, 4 Core CPU (2.90Ghz per core), 300GB Hard Disk
 
+### Firewall
+```
+sudo ufw allow 22 && sudo ufw allow 26657/tcp && sudo ufw allow 8545/tcp && sudo ufw allow 8667/tcp && sudo ufw allow 8668/tcp && sudo ufw allow 8669/tcp && sudo ufw enable
+```
 
 ### Setup the fn CLI Tool
 `fn`: Findora Node Setup (fn) is a command-line (CLI) utility that allows you to set up a validator node and stake/unstake FRA.

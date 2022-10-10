@@ -304,3 +304,4 @@ fn unstake -n $((10 * 1000000))
 ```
 fn unstake
 ```
+> **Note**:This command will unstake all of your FRA and remove your node from the Findora Network.

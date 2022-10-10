@@ -98,6 +98,8 @@ Backup the following files
 
 And backup `config` folder from `/data/findora/mainnet/tendermint`
 
+<strong><p style="font-size=14px" align="left"> You have successfully installed node</p></strong>
+
 # Staking
 Validators must stake a minimum of 10,000 FRA to register as a validator. Before you can stake FRA to your validator, you must first transfer FRA to the Findora Address of your validator.
 

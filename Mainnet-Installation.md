@@ -104,7 +104,7 @@ This is the guide how to Migrate Servers by [@EasyNode](https://twitter.com/Easy
 [How to Migrate](https://guides.easynode.one/findora/moving)
 
 
-<strong><p style="font-size=14px>Useful command</p></strong>
+<strong><p style="font-size=14px">Useful command</p></strong>
 
 >- Check Logs:
 ```

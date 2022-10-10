@@ -97,3 +97,13 @@ Backup the following files
 `/data/findora/mainnet/mainnet_node.key` & `/data/findora/mainnet/node.mnemonic`
 
 And backup `config` folder from `/data/findora/mainnet/tendermint`
+
+# Staking
+Validators must stake a minimum of 10,000 FRA to register as a validator. Before you can stake FRA to your validator, you must first transfer FRA to the Findora Address of your validator.
+
+If you don't have FRA,
+You can buy from any exchange listed on [this page](https://coinmarketcap.com/currencies/findora/markets/)
+
+**Note**: Kucoin only support Findora EVM(0x.....) to withdrawing ,you need to transfer from EVM to Findora Wallet(fra....) first before you can stake it.
+
+To transfer your FRA from EVM to Findora Wallet, use Prism Feature. See this [guide](https://wiki.findora.org/docs/dapp/wallet/)

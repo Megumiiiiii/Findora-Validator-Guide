@@ -56,7 +56,7 @@ sudo mkdir -p /data/findora/mainnet
 cd /data/findora/mainnet
 nano mainnet_node.key
 ```
-Fill with `temp.gen.keypair` 's content.
+Fill with `tmp.gen.keypair` 's content.
 Then save it `CTRL+X` `Y` `Enter`
 
 
@@ -77,3 +77,22 @@ After finished downloading, run the script:
 ```
 bash -x node_init_mainnet-423a36f2adaaeab9de7ff63e61d3d4c1.sh
 ```
+
+### Connect to Network
+To connect fn with the Findora Network, use this command:
+```
+fn setup -S https://prod-mainnet.prod.findora.org
+```
+To connect your staking key to fn, use the below command. This allows fn to sign transactions on your behalf
+```
+fn setup -O /data/findora/mainnet/node.mnemonic
+```
+To connect your Node Key to fn, use the command below
+```
+fn setup -K /data/findora/mainnet/tendermint/config/priv_validator_key.json
+```
+
+### Backup
+Backup the following files
+`/data/findora/mainnet/mainnet_node.key` & `/data/findora/mainnet/node.mnemonic`
+And `config` folder from `/data/findora/mainnet/tendermint`

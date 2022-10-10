@@ -239,4 +239,33 @@ node, a float number from 0.0 to 1.0, optional
 ### Stake Initial FRA and Set Commission Rate
 After receiving FRA to your validator's Address, you must stake a minimum of 10,000 FRA to become a validator (make sure you have more than 10,000FRA in your Validator's wallet for fees). Only the top 100 validators (with the most FRA staked) will earn FRA rewards.
 
->>> **Tip**: Before staking, wait for 100% data synchronization of your validator node, otherwise you may be charged a 'validator node offline' penatly fee.
+> **NOTE**: Before staking, wait for 100% data synchronization of your validator node, otherwise you may be charged a 'validator node offline' penatly fee.
+>> Use command below to check synchronization status
+```
+curl 'http://localhost:26657/status'
+```
+If `"catching_up=true"` it means it's not sync yet, wait till `"catching_up=false"`
+
+
+Then create a file called `staker_memo` while waiting for your node to sync
+```
+nano staker_memo
+```
+Submit all details you want
+
+Example:
+```
+{
+  "name": "Findora",
+  "desc": " This is just example  ",
+  "website": "https://www.findora.org",
+  "logo": "https://example-logo.png"
+}
+```
+Save `CTRL+X` `Y` `Enter`
+
+After your node sync, you can start to stake FRA to your validator using command below
+```
+fn stake -n $((10000 * 1000000)) -R 0.05 -M "$(cat staker_memo)"
+```
+>> With the command command, you stake 10,000FRA and set your validator commission rate to 5% . Also make sure to run that command in the same directory where you created the `staker_memo`

@@ -62,7 +62,7 @@ After it's all ready, we can continue to the next step.
 
 ### Download & Run the scripts
 	
-Back to your $HOME if you still in `~/data/findora/mainnet/` then download
+Back to your $HOME if you're still in `~/data/findora/mainnet/` then download
 
 To download:
 ```

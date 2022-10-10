@@ -17,13 +17,18 @@ Explorer
 ### System Requirements
 - Minimum: 8GB RAM, 2 Core CPU (2.90GHz per core), 100GB Hard Disk
 - Recommended: 16GB RAM, 4 Core CPU (2.90Ghz per core), 300GB Hard Disk
+        > AWS T3 t3.2xlarge
+        > AliCloud g6 g6.2xlarge
+        > GCP n2 n2-standard-8
+        > Contabo Cloud VPS M
 
 ### Install Docker
-If you don't have docker, install it first
+If you don't have docker in your system, install it first
 
 [How to install docker](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-20-04)
 
 ### Firewall
+This is the commands to configure the needed ports on Ubuntu 20.04LTS using `ufw`:
 ```
 sudo ufw allow 22 && sudo ufw allow 26657/tcp && sudo ufw allow 8545/tcp && sudo ufw allow 8667/tcp && sudo ufw allow 8668/tcp && sudo ufw allow 8669/tcp && sudo ufw enable
 ```
@@ -34,7 +39,7 @@ sudo ufw allow 22 && sudo ufw allow 26657/tcp && sudo ufw allow 8545/tcp && sudo
 - [Linux](https://wiki.findora.org/bin/linux/fn)
 - [MacOs](https://wiki.findora.org/bin/macos/fn)
 
-Download file and move to your path:
+Download the file and move to your path
 ```
 wget https://wiki.findora.org/bin/linux/fn
 
@@ -44,32 +49,38 @@ mv fn /usr/local/bin/
 ```
 
 ### Generate new Key
-Generate a new random pair of public and private keys that will be used for FRA staking:
+Generate a new random pair of public and private keys that will be used for FRA staking
 ```
 fn genkey > tmp.gen.keypair
 ```
-View your keys `cat tmp.gen.keypair` and save it to `/data/findora/mainnet/mainnet_node.key`
+Before continue to the installation steps.
 
-<b>Note</b>: *If the directory does not exist, you will need to create it first*
+You will need to create a directory to save your keys. 
+
+To do it, open new window then run these command
 ```
 sudo mkdir -p /data/findora/mainnet
 cd /data/findora/mainnet
 nano mainnet_node.key
 ```
-Fill with `tmp.gen.keypair` 's content.
-Then save it `CTRL+X` `Y` `Enter`
-
+Back to first window and use this command to view your keys
+```
+cat tmp.gen.keypair
+```
+Copy all content from it and paste to second window.
+Then save, this is how to save it `CTRL+X` `Y` `Enter`
 
 Your `mainnet_node.key` should be like this
 <p align="left"><img height="100" height="auto" src="https://user-images.githubusercontent.com/98658943/194928553-6d50f5d4-7eb2-43ef-a6c1-78e2b3478d2e.png"</p>
 
-After it's all ready, we can continue to the next step.
+Close your second window
 
-### Download & Run the scripts
-	
-Back to your $HOME if you're still in `~/data/findora/mainnet/` then download
+After it's all ready, you can continue to the next step.
 
-To download:
+### Download & Run the script
+Running scripts can take a while, because this will downloading a lot of files and then extract them
+
+Download Automated Script:
 ```
 wget https://wiki.findora.org/assets/files/node_init_mainnet-423a36f2adaaeab9de7ff63e61d3d4c1.sh
 ```
@@ -79,6 +90,7 @@ bash -x node_init_mainnet-423a36f2adaaeab9de7ff63e61d3d4c1.sh
 ```
 
 ### Connect to Network
+
 To connect fn with the Findora Network, use this command:
 ```
 fn setup -S https://prod-mainnet.prod.findora.org

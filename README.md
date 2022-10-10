@@ -161,14 +161,20 @@ Next steps is how to fund your validator and stake FRA
 # Staking Guide
 
 ### Minimum self-stake and where you can buy FRA
-Validators must stake a minimum of 10,000 FRA to register as a validator. Before you can stake FRA to your validator, you must transfer FRA from existing wallet to the Findora Address of your validator.
+Validators must stake a minimum of 10,000 FRA to register as a validator. Before you can stake FRA to your validator, you must transfer FRA from existing wallet to your Validator Wallet.
+
+You can get your Validator's wallet Address by using this command
+```
+fn show
+```
 
 If you don't have FRA,
 You can buy from any exchange listed on [CEX Lists](https://coinmarketcap.com/currencies/findora/markets/)
 
-**Note**: Kucoin only support Findora EVM(0x.....) to withdrawing ,you need to transfer from EVM to Findora Wallet(fra....) before you can stake it.
+> Kucoin only support Findora EVM(0x.....) to withdrawing ,you need to transfer from EVM to Findora Wallet(fra....) before you can stake it.
+>> To transfer your FRA from EVM to Findora Wallet, use Prism Feature. See this [Guide](https://wiki.findora.org/docs/dapp/wallet/)
+>>> **Note**: Don't use Prism to withdraw or deposit from CEX or you will lost your FRA, because CEX doesn't support internal transaction 
 
-To transfer your FRA from EVM to Findora Wallet, use Prism Feature. See this [Guide](https://wiki.findora.org/docs/dapp/wallet/)
 
 ## Node Operations
 ### fn CLI tool
@@ -237,9 +243,9 @@ node, a float number from 0.0 to 1.0, optional
         --validator-memo-website <Website>
 ```
 ### Stake Initial FRA and Set Commission Rate
-After receiving FRA to your validator's Address, you must stake a minimum of 10,000 FRA to become a validator (make sure you have more than 10,000FRA in your Validator's wallet for fees). Only the top 100 validators (with the most FRA staked) will earn FRA rewards.
+After receiving FRA to your Validator's wallet, you must stake a minimum of 10,000 FRA to become a validator (make sure you have more than 10,000 FRA in your Validator's wallet for fees). Only the top 100 validators (with the most FRA staked) will earn FRA rewards.
 
-> **NOTE**: Before staking, wait for 100% data synchronization of your validator node, otherwise you may be charged a 'validator node offline' penatly fee.
+> **Note**: Before staking, wait for 100% data synchronization of your validator node, otherwise you may be charged a 'validator node offline' penatly fee.
 >> Use command below to check synchronization status
 ```
 curl 'http://localhost:26657/status'
@@ -268,4 +274,33 @@ After your node sync, you can start to stake FRA to your validator using command
 ```
 fn stake -n $((10000 * 1000000)) -R 0.05 -M "$(cat staker_memo)"
 ```
->> With the command command, you stake 10,000FRA and set your validator commission rate to 5% . Also make sure to run that command in the same directory where you created the `staker_memo`
+> With the command above, that means you stake 10,000FRA and set your validator commission rate to 5% . Also make sure to run that command in the same directory where you created the `staker_memo`
+>> You can update your commission rate and memo using `fn staker-update` like this
+```
+fn staker-update -R 0.1 -M "$(cat staker_memo)
+```
+### Stake Additional FRA
+Use this command to stake more FRA, let say you want to stake 3,000 FRA
+```
+fn stake -a -n $((3000 * 1000000))
+```
+
+#### View Node Information
+To find information about your validator node, use this
+```
+fn show
+```
+#### Claim Rewards
+If your validator is a top 100 validator, it will earn rewards which will show up like this `"rewards":100,` in section on `fn show` . To claim
+```
+fn claim -n $((10 * 1000000))
+```
+#### Unstake Some FRA
+Use it to unstake some FRA, but keep on mind, there will be `unbound_period` which means your FRA can be used for transaction after 113400 blocks after unstake 
+```
+fn unstake -n $((10 * 1000000))
+```
+#### Close Validator and unstake all of your FRA
+```
+fn unstake
+```

@@ -63,20 +63,20 @@ You will need to create a directory to save your keys.
 To do it, open new window then run these command
 ```
 sudo mkdir -p /data/findora/mainnet
-cd /data/findora/mainnet
-nano mainnet_node.key
 ```
-Back to first window and use this command to view your keys
+Then save your keys
 ```
-cat tmp.gen.keypair
+cp tmp.gen.keypair data/findora/mainnet/mainnet_node.key
 ```
-Copy all content from it and paste to second window.
-Then save, this is how to save it `CTRL+X` `Y` `Enter`
+After it, see your `mainnet_node.key`
+```
+cat /data/findora/mainnet/mainnet_node.key
+```
 
 Your `mainnet_node.key` should be like this
 <p align="left"><img height="100" height="auto" src="https://user-images.githubusercontent.com/98658943/194928553-6d50f5d4-7eb2-43ef-a6c1-78e2b3478d2e.png"</p>
 
-Close your second window
+Don't forget to backup your keys, you will need this to restore your wallet. **Don't share your mnemonic pharse / `sec_key` with anyone**
 
 After it's all ready, you can continue to the next step.
 

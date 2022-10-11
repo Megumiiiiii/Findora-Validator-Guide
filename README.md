@@ -64,7 +64,7 @@ To do it, open new window then run these command
 ```
 sudo mkdir -p /data/findora/mainnet
 ```
-Then save your keys
+Then save your keys there
 ```
 cp tmp.gen.keypair data/findora/mainnet/mainnet_node.key
 ```

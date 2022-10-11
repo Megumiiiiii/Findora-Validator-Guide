@@ -171,7 +171,7 @@ fn show
 If you don't have FRA,
 You can buy from any exchange listed on [CEX Lists](https://coinmarketcap.com/currencies/findora/markets/)
 
-> Kucoin only support Findora EVM(0x.....) to withdrawing ,you need to transfer from EVM to Findora Wallet(fra....) before you can stake it.
+> Kucoin only support Findora EVM(0x.....) for withdrawing, you need to transfer from EVM to Findora Wallet(fra....) before you can stake it.
 >> To transfer your FRA from EVM to Findora Wallet, use Prism Feature. See this [Guide](https://wiki.findora.org/docs/dapp/wallet/)
 >>> **Note**: Don't use Prism to withdraw or deposit from CEX or you will lost your FRA, because CEX doesn't support internal transaction 
 

@@ -76,9 +76,9 @@ cat /data/findora/mainnet/mainnet_node.key
 Your `mainnet_node.key` should be like this
 <p align="left"><img height="100" height="auto" src="https://user-images.githubusercontent.com/98658943/194928553-6d50f5d4-7eb2-43ef-a6c1-78e2b3478d2e.png"</p>
 
-Don't forget to backup your keys, you will need this to restore your wallet. **Don't share your mnemonic pharse / `sec_key` with anyone**
+> Don't forget to backup your keys, you will need this to restore your wallet. And also **don't share your mnemonic pharse / `sec_key` with anyone**
 
-After it's all ready, you can continue to the next step.
+After it's all ready, you can continue to the next step
 
 ### Download & Run the script
 Running scripts can take a while, because this will downloading a lot of files and then extract them

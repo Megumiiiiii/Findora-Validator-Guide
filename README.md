@@ -68,7 +68,7 @@ Then save your keys there
 ```
 cp tmp.gen.keypair data/findora/mainnet/mainnet_node.key
 ```
-After it, see your `mainnet_node.key`
+See your `mainnet_node.key` that is your keys
 ```
 cat /data/findora/mainnet/mainnet_node.key
 ```

@@ -46,10 +46,8 @@ sudo ufw allow 22 && sudo ufw allow 26657/tcp && sudo ufw allow 8545/tcp && sudo
 
 Download the file and move to your path
 ```
-wget https://wiki.findora.org/bin/linux/fn
-
+wget https://github.com/FindoraNetwork/findora-wiki-docs/raw/main/.gitbook/assets/fn
 chmod +x fn
-
 mv fn /usr/local/bin/
 ```
 

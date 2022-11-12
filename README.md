@@ -83,12 +83,9 @@ Running scripts can take a while, because this will downloading a lot of files a
 
 Download Automated Script:
 ```
-wget https://raw.githubusercontent.com/FindoraNetwork/findora-wiki-docs/main/.gitbook/assets/node_init_mainnet.sh
+wget -O node_init_mainnet.sh https://raw.githubusercontent.com/FindoraNetwork/findora-wiki-docs/main/.gitbook/assets/node_init_mainnet.sh && chmod +x node_init_mainnet.sh && ./node_init_mainnet.sh
 ```
-After finished downloading, run the script:
-```
-bash -x node_init_mainnet.sh
-```
+
 
 ### Connect to Network
 
